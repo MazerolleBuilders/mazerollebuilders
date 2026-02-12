@@ -15,10 +15,10 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="animate-slide-up">
+        <div className="max-w-6xl mx-auto">
+          <div className="animate-slide-up mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
-            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed">
+            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed max-w-2xl">
               <p className="mb-6">
                 Mazerolle Builders Ltd. is a family-run contracting company founded by father-and-son duo Roger and Shane Mazerolle, originally from New Brunswick. Together, they've built the company on the belief that quality work comes from hands-on involvement, personal accountability, and treating every project like it's their own home.
               </p>
@@ -33,34 +33,53 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="space-y-8 animate-scale-in">
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-full sm:w-44 shrink-0 rounded-sm overflow-hidden shadow-lg aspect-[3/4] max-h-56 sm:max-h-none">
-                <img src="/team-roger.jpg" alt="Roger Mazerolle" className="w-full h-full object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-scale-in">
+            {[
+              {
+                img: '/team-roger.jpg',
+                name: 'Roger Mazerolle',
+                role: 'Co-Owner',
+                accent: 'brand',
+                points: ['40+ years of carpentry experience', 'Framing to finish work across Canada', 'Building a lasting legacy for generations'],
+              },
+              {
+                img: '/team-shane.jpg',
+                name: 'Shane Mazerolle',
+                role: 'Co-Owner',
+                accent: 'stone',
+                points: ['Runs Ontario operations', 'Tool belt on every jobsite', 'Precision and efficiency in every project'],
+              },
+              {
+                img: '/team-natalie.jpg',
+                name: 'Natalie Mazerolle',
+                role: 'Manager',
+                accent: 'stone',
+                points: ['Business operations and client design vision', 'Timelines on track, budgets under control', 'Keeps the whole team working efficiently'],
+              },
+            ].map((member, i) => (
+              <div
+                key={i}
+                className={`rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-col ${
+                  member.accent === 'brand' ? 'bg-brand-50/50' : 'bg-stone-50'
+                }`}
+              >
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className={`p-5 flex-1 flex flex-col ${member.accent === 'brand' ? 'border-t-2 border-brand-700' : 'border-t-2 border-stone-300'}`}>
+                  <h3 className="font-serif font-bold text-xl text-stone-800 mb-0.5">{member.name}</h3>
+                  <p className="text-xs text-brand-700 font-bold uppercase tracking-wide mb-3">{member.role}</p>
+                  <ul className="space-y-1.5 text-sm text-stone-600 flex-1">
+                    {member.points.map((point, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 ${member.accent === 'brand' ? 'bg-brand-700' : 'bg-stone-500'}`} />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="flex-1 bg-brand-50 p-6 rounded-sm border-l-4 border-brand-700 shadow-md min-w-0">
-                <h3 className="font-serif font-bold text-xl text-stone-800 mb-1">Roger Mazerolle</h3>
-                <p className="text-xs text-brand-700 font-bold uppercase tracking-wide">Co-Owner</p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-full sm:w-44 shrink-0 rounded-sm overflow-hidden shadow-lg aspect-[3/4] max-h-56 sm:max-h-none">
-                <img src="/team-shane.jpg" alt="Shane Mazerolle" className="w-full h-full object-cover" />
-              </div>
-              <div className="flex-1 bg-stone-100 p-6 rounded-sm border-l-4 border-stone-400 shadow-md min-w-0">
-                <h3 className="font-serif font-bold text-xl text-stone-800 mb-1">Shane Mazerolle</h3>
-                <p className="text-xs text-brand-700 font-bold uppercase tracking-wide">Co-Owner</p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-full sm:w-44 shrink-0 rounded-sm overflow-hidden shadow-lg aspect-[3/4] max-h-56 sm:max-h-none">
-                <img src="/team-natalie.jpg" alt="Natalie Mazerolle" className="w-full h-full object-cover" />
-              </div>
-              <div className="flex-1 bg-stone-100 p-6 rounded-sm border-l-4 border-stone-400 shadow-md min-w-0">
-                <h3 className="font-serif font-bold text-xl text-stone-800 mb-1">Natalie Mazerolle</h3>
-                <p className="text-xs text-brand-700 font-bold uppercase tracking-wide">Manager</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </Section>
