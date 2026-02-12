@@ -23,20 +23,20 @@ const Services: React.FC = () => {
       <Section bg="white">
         <div className="space-y-24">
           
-          {/* New Builds */}
+          {/* Ontario New Builds */}
           <div id="new-builds" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
             <div className="order-2 lg:order-1 animate-slide-up">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
                   <Home size={32} />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800">New Builds</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800">Ontario New Builds</h2>
               </div>
               <p className="text-lg text-stone-600 mb-6 leading-relaxed">
-                Whether you are building your dream home or a new commercial facility, we provide end-to-end construction services. We own our own equipment and machinery, allowing for efficient, year-round work.
+                Whether you're building your dream tiny home, a new garage, or an industrial shop, we provide end-to-end construction services tailored to your vision. Backed by strong framing expertise, we build efficiently and deliver durable, beautifully crafted accessory structures designed to last.
               </p>
               <ul className="space-y-4 mb-10">
-                {['Residential Homes', 'Restaurants & Commercial Spaces', 'Workshops & Banks', 'Indoor & Outdoor Framing', 'Year-round construction'].map((item, i) => (
+                {['Tiny Homes & ADUs', 'Workshops', 'Garages & Sheds', 'Additions', 'Residential, Commercial & Agricultural'].map((item, i) => (
                   <li key={i} className="flex items-center text-stone-700">
                     <span className="w-2 h-2 bg-brand-600 rounded-full mr-3"></span>
                     {item}
@@ -46,9 +46,7 @@ const Services: React.FC = () => {
               <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Request an Estimate for New Construction</Link>
             </div>
             <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
-              <div className="w-full h-full bg-stone-200 border-2 border-dashed border-stone-400 rounded-sm shadow-xl flex items-center justify-center">
-                <span className="text-stone-500 text-lg font-medium">Image here</span>
-              </div>
+              <img src="/new-builds.jpg" alt="Ontario new builds - Norwich shop framing" className="w-full h-full object-cover rounded-sm shadow-xl" />
             </div>
           </div>
 
