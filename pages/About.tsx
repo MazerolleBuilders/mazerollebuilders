@@ -15,7 +15,8 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           <div className="animate-slide-up text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
             <div className="prose prose-stone text-lg text-stone-600 leading-relaxed text-center">
@@ -57,6 +58,7 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </Section>
 
