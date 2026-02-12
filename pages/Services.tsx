@@ -122,7 +122,7 @@ const Services: React.FC = () => {
                 <div id="outdoor-living" className="bg-stone-50 p-10 rounded-sm hover:shadow-xl transition-all hover:-translate-y-1">
                    <Warehouse className="text-brand-700 mb-6" size={36} />
                    <h3 className="text-xl font-bold mb-4">Outdoor Living</h3>
-                   <p className="text-stone-600 leading-relaxed">Decks, pergolas, and outdoor structures designed to enhance your property.</p>
+                   <p className="text-stone-600 leading-relaxed">Decks, porches, and sunrooms designed to enhance your property.</p>
                 </div>
                 <div id="structural-work" className="bg-stone-50 p-10 rounded-sm hover:shadow-xl transition-all hover:-translate-y-1">
                    <Ruler className="text-brand-700 mb-6" size={36} />
