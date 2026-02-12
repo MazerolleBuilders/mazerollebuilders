@@ -46,7 +46,7 @@ const About: React.FC = () => {
                 }`}
               >
                 <div className="flex-1 min-w-0 min-h-0 relative overflow-hidden">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
+                  <img src={member.img} alt={member.name} className="w-full h-full object-cover object-[50%_30%]" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-4">
                     <h3 className="font-serif font-bold text-white text-lg">{member.name}</h3>
                     <p className="text-xs text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
