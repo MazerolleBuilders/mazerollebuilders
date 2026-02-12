@@ -103,21 +103,13 @@ const About: React.FC = () => {
                ))}
              </ul>
            </div>
-           <div className="bg-stone-50 p-12 rounded-sm border-l-4 border-brand-700 shadow-lg animate-scale-in">
-              <div className="w-full h-64 bg-stone-200 border-2 border-dashed border-stone-400 rounded-sm mb-6 shadow-sm flex items-center justify-center">
-                <span className="text-stone-500 text-lg font-medium">Image here</span>
-              </div>
-              <h3 className="font-serif font-bold text-2xl mb-6 text-stone-800">Our Promise</h3>
-              <p className="italic text-stone-600 text-xl leading-relaxed">
-                "We don't take on every project that comes our way. We take on projects where we know we can deliver exceptional quality and where the client values a job done right."
-              </p>
-              <div className="mt-10 flex items-center">
-                 <div className="w-14 h-14 bg-brand-700 text-white flex items-center justify-center rounded-full font-serif font-bold text-xl mr-5 shadow-md">M</div>
-                 <div>
-                    <span className="font-bold text-stone-800 block text-lg">Roger & Shane Mazerolle</span>
-                    <span className="text-sm text-brand-600 uppercase tracking-widest font-bold">Owners</span>
-                 </div>
-              </div>
+           <div className="bg-stone-50 p-12 rounded-sm border-l-4 border-brand-700 shadow-lg animate-scale-in flex flex-wrap gap-8 items-center justify-center py-12">
+             <a href="https://renomark.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-24 px-8 opacity-90 hover:opacity-100 transition-opacity">
+               <img src="https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg" alt="RenoMark - Renovate with Confidence" className="h-20 w-auto object-contain" />
+             </a>
+             <a href="https://www.chba.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-24 px-8 opacity-90 hover:opacity-100 transition-opacity">
+               <img src="https://growthzonecmsprodeastus.azureedge.net/sites/32/2017/09/CHBALogo.png" alt="Canadian Home Builders' Association" className="h-20 w-auto object-contain" />
+             </a>
            </div>
         </div>
       </Section>
