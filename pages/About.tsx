@@ -15,10 +15,10 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="max-w-6xl mx-auto">
-          <div className="animate-slide-up mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
-            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed max-w-2xl">
+            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed">
               <p className="mb-6">
                 Mazerolle Builders Ltd. is a family-run contracting company founded by father-and-son duo Roger and Shane Mazerolle, originally from New Brunswick. Together, they've built the company on the belief that quality work comes from hands-on involvement, personal accountability, and treating every project like it's their own home.
               </p>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-scale-in">
+          <div className="grid grid-cols-1 gap-6 animate-scale-in">
             {[
               {
                 img: '/team-roger.jpg',
@@ -59,14 +59,14 @@ const About: React.FC = () => {
             ].map((member, i) => (
               <div
                 key={i}
-                className={`rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-col ${
+                className={`rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-row ${
                   member.accent === 'brand' ? 'bg-brand-50/50' : 'bg-stone-50'
                 }`}
               >
-                <div className="aspect-[4/5] overflow-hidden">
+                <div className="w-28 sm:w-36 shrink-0 aspect-[3/4] overflow-hidden">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
                 </div>
-                <div className={`p-5 flex-1 flex flex-col ${member.accent === 'brand' ? 'border-t-2 border-brand-700' : 'border-t-2 border-stone-300'}`}>
+                <div className={`p-4 sm:p-5 flex-1 flex flex-col min-w-0 ${member.accent === 'brand' ? 'border-l-4 border-brand-700' : 'border-l-4 border-stone-300'}`}>
                   <h3 className="font-serif font-bold text-xl text-stone-800 mb-0.5">{member.name}</h3>
                   <p className="text-xs text-brand-700 font-bold uppercase tracking-wide mb-3">{member.role}</p>
                   <ul className="space-y-1.5 text-sm text-stone-600 flex-1">
