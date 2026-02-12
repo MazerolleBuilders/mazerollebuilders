@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="group">
-                    <h4 className="font-bold text-white mb-2 flex items-center uppercase tracking-wider text-xs text-brand-500">Email</h4>
+                    <h4 className="font-bold text-white mb-2 flex items-center uppercase tracking-wider text-xs text-brand-500">Email Address</h4>
                     <a href="mailto:mazerollebuildersltd@gmail.com" className="flex items-center text-xl hover:text-brand-400 transition-colors break-all">
                       <Mail size={24} className="mr-4 group-hover:scale-110 transition-transform shrink-0" />
                       mazerollebuildersltd@gmail.com
@@ -192,7 +192,7 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="attachments" className="block text-sm font-medium text-stone-700 mb-2 flex items-center">
                       <Paperclip size={18} className="mr-2 text-stone-500" />
-                      Attach files (sketches, drawings, building plans, etc.)
+                      Attach Files (Sketches, Drawings, Building Plans, etc.)
                     </label>
                     <input
                       type="file"
