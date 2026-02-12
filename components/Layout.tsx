@@ -2,17 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Facebook } from 'lucide-react';
 
-const LogoIcon = ({ className = 'text-brand-700', size = 'md' }: { className?: string; size?: 'md' | 'sm' }) => (
-  <svg viewBox="0 0 120 80" className={`w-auto ${size === 'sm' ? 'h-8' : 'h-12 md:h-14'} ${className}`} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-    <path d="M 18 62 L 48 22" />
-    <path d="M 21 59 L 51 24" />
-    <path d="M 48 22 L 78 62" />
-    <path d="M 51 24 L 75 59" />
-    <path d="M 42 62 L 72 22" />
-    <path d="M 45 59 L 75 24" />
-    <path d="M 72 22 L 102 62" />
-    <path d="M 75 24 L 99 59" />
-  </svg>
+import logoImg from '../logo.png';
+
+const LogoIcon = ({ className = '', size = 'md' }: { className?: string; size?: 'md' | 'sm' }) => (
+  <img src={logoImg} alt="Mazerolle Builders" className={`w-auto object-contain ${size === 'sm' ? 'h-8' : 'h-12 md:h-14'} ${className}`} />
 );
 
 const Layout: React.FC = () => {
@@ -134,7 +127,7 @@ const Layout: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-2">
                  {/* Logo for Footer */}
-                 <LogoIcon size="sm" className="text-white" />
+                 <LogoIcon size="sm" className="brightness-0 invert opacity-90" />
                 <div>
                   <h3 className="text-lg font-serif font-bold text-white leading-none">MAZEROLLE</h3>
                   <p className="text-[0.6rem] text-brand-400 font-medium tracking-widest uppercase">Builders Ltd.</p>
