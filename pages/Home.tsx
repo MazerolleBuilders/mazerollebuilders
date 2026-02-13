@@ -159,7 +159,17 @@ const Home: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Service 1 - New Builds (NB) */}
+          {/* Service 1 - New Builds (ON) */}
+          <Link to="/services#new-builds" className="group block h-full">
+            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
+              <img src="/comprehensive-new-builds-on.jpg" alt="New Builds ON - Smerek Garage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            </div>
+            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">New Builds (ON)</h3>
+            <p className="text-stone-600 mb-4 leading-relaxed">Unlock the full potential of your property. From initial vision to final occupancy, we design and build accessory structures and additions that integrate seamlessly with your lifestyle.</p>
+            <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
+          </Link>
+
+          {/* Service 2 - New Builds (NB) */}
           <Link to="/services#new-builds-nb" className="group block h-full">
             <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
               <img src="/comprehensive-new-builds-nb.jpg" alt="New Builds NB - Log Home" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -169,7 +179,7 @@ const Home: React.FC = () => {
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
 
-          {/* Service 2 - Renovations */}
+          {/* Service 3 - Renovations */}
           <Link to="/services#renovations" className="group block h-full">
             <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
               <img src="/comprehensive-renos.jpg" alt="Renovations" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -179,23 +189,13 @@ const Home: React.FC = () => {
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
 
-          {/* Service 3 - General Contracting */}
+          {/* Service 4 - General Contracting */}
           <Link to="/services#general-contracting" className="group block h-full">
             <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
               <img src="/comprehensive-gc.jpg" alt="General Contracting" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">General Contracting</h3>
             <p className="text-stone-600 mb-4 leading-relaxed">Complete project management. Tell us your vision, and we manage the trades, timelines, and every detail from start to finish.</p>
-            <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
-          </Link>
-
-          {/* Service 4 - New Builds (ON) */}
-          <Link to="/services#new-builds" className="group block h-full">
-            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
-              <img src="/comprehensive-new-builds-on.jpg" alt="New Builds ON - Smerek Garage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">New Builds (ON)</h3>
-            <p className="text-stone-600 mb-4 leading-relaxed">Unlock the full potential of your property. From initial vision to final occupancy, we design and build accessory structures and additions that integrate seamlessly with your lifestyle.</p>
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
         </div>
