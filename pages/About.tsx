@@ -69,17 +69,24 @@ const About: React.FC = () => {
           <p className="text-stone-600">We don't cut corners on safety or liability. Your project is protected.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
            {[
-             { icon: Shield, color: 'text-green-700', bg: 'bg-green-100', title: 'WSIB Coverage', desc: "Full Worker's Compensation coverage for all staff." },
-             { icon: Award, color: 'text-blue-700', bg: 'bg-blue-100', title: 'Liability Insurance', desc: "Comprehensive General Liability insurance policy." },
-             { icon: GraduationCap, color: 'text-red-700', bg: 'bg-red-100', title: 'Certified Expertise', desc: "Building code expertise and First Aid trained staff." },
-             { icon: Users, color: 'text-orange-700', bg: 'bg-orange-100', title: 'Safety Meetings', desc: "Regular safety briefings and strict COVID-19 protocols." },
+             { icon: Shield, color: 'text-green-700', bg: 'bg-green-100', title: 'Workers Compensation Insurance', desc: "WSIB and WorkSafeNB coverage—provincially regulated protection for all staff." },
+             { icon: Award, color: 'text-blue-700', bg: 'bg-blue-100', title: 'Insured', desc: "Comprehensive insurance for a worry free project." },
+             { icon: GraduationCap, color: 'text-red-700', bg: 'bg-red-100', title: 'Safety Focused', desc: "Educated and trained staff, strict procedures, and regular meetings to keep everyone safe." },
+             { logo: 'https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg', href: 'https://renomark.ca', title: 'Membership to RenoMark', desc: "Proud RenoMark members upholding the highest standards in renovation." },
+             { logo: 'https://img1.wsimg.com/isteam/ip/f8d25033-2d29-436f-ab08-7b5424b9a57a/OCBA%20Logo%20No%20Background.png', href: 'https://oxfordcountyba.ca', title: 'Membership to OCBA', desc: "Oxford County Builders Association member." },
            ].map((item, idx) => (
              <div key={idx} className="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
-               <div className={`w-14 h-14 ${item.bg} ${item.color} rounded-full flex items-center justify-center mb-5`}>
-                 <item.icon size={28} />
-               </div>
+               {'logo' in item && item.logo ? (
+                 <a href={item.href} target="_blank" rel="noopener noreferrer" className="mb-5 flex items-center justify-center h-16">
+                   <img src={item.logo} alt={item.title} className="h-12 w-auto object-contain max-w-full" />
+                 </a>
+               ) : (
+                 <div className={`w-14 h-14 ${item.bg} ${item.color} rounded-full flex items-center justify-center mb-5`}>
+                   <item.icon size={28} />
+                 </div>
+               )}
                <h3 className="font-bold text-stone-800 mb-3 text-lg">{item.title}</h3>
                <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
              </div>
