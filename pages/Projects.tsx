@@ -7,17 +7,17 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'Tiny House Lyndhurst',
-      category: 'New Build',
+      title: 'Basement Entrance Duplex Breslau',
+      category: 'Renovation',
       image: '/project-1.jpg',
-      desc: 'Complete tiny home build from foundation to finishing. Compact living with quality craftsmanship.'
+      desc: 'Basement entrance and access work for a duplex conversion. Functional design for multi-unit living.'
     },
     {
       id: 2,
-      title: 'Mazerolles at Work',
-      category: 'General Contracting',
+      title: 'New Non Slip Front Porch Woodstock',
+      category: 'Outdoor',
       image: '/project-2.jpg',
-      desc: 'Our team on site—hands-on construction and attention to detail on every project.'
+      desc: 'Safe, non-slip front porch installation. Durable outdoor entrance upgrade for Woodstock property.'
     },
     {
       id: 3,
@@ -98,11 +98,11 @@ const Projects: React.FC = () => {
               <BeforeAfterSlider 
                 beforeImage="/projects-before-after-1-before.jpg"
                 afterImage="/projects-before-after-1-after.jpg"
-                alt="Laurel St Bathroom"
+                alt="Laurel Street Bathroom"
               />
             </div>
             <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel St Bathroom</h3>
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Bathroom</h3>
               <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
             </div>
           </div>
