@@ -6,27 +6,6 @@ import { Link } from 'react-router-dom';
 const Projects: React.FC = () => {
   const projects = [
     {
-      id: 1,
-      title: 'Basement Entrance Duplex Breslau',
-      category: 'Renovation',
-      image: '/project-1.jpg',
-      desc: 'Basement entrance and access work for a duplex conversion. Functional design for multi-unit living.'
-    },
-    {
-      id: 2,
-      title: 'New Non Slip Front Porch Woodstock',
-      category: 'Outdoor',
-      image: '/project-2.jpg',
-      desc: 'Safe, non-slip front porch installation. Durable outdoor entrance upgrade for Woodstock property.'
-    },
-    {
-      id: 3,
-      title: 'Balcony Deck and Railing',
-      category: 'Outdoor',
-      image: '/project-3.jpg',
-      desc: 'Custom balcony deck with railing. Safe, durable outdoor living space.'
-    },
-    {
       id: 4,
       title: 'Boat Storage Shop',
       category: 'New Build',
@@ -46,6 +25,27 @@ const Projects: React.FC = () => {
       category: 'New Build',
       image: '/project-6.jpg',
       desc: 'Framing and structural work for residential townhome development.'
+    },
+    {
+      id: 1,
+      title: 'Basement Entrance Duplex Breslau',
+      category: 'Renovation',
+      image: '/project-1.jpg',
+      desc: 'Basement entrance and access work for a duplex conversion. Functional design for multi-unit living.'
+    },
+    {
+      id: 2,
+      title: 'New Non Slip Front Porch Woodstock',
+      category: 'Outdoor',
+      image: '/project-2.jpg',
+      desc: 'Safe, non-slip front porch installation. Durable outdoor entrance upgrade for Woodstock property.'
+    },
+    {
+      id: 3,
+      title: 'Log Playground Anderson Rd NB',
+      category: 'Outdoor',
+      image: '/project-3.jpg',
+      desc: 'Custom log playground structure in New Brunswick. Natural materials for lasting outdoor fun.'
     }
   ];
 
@@ -96,19 +96,6 @@ const Projects: React.FC = () => {
           <div className="animate-scale-in">
             <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
               <BeforeAfterSlider 
-                beforeImage="/projects-before-after-1-before.jpg"
-                afterImage="/projects-before-after-1-after.jpg"
-                alt="Laurel Street Bathroom"
-              />
-            </div>
-            <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Bathroom</h3>
-              <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
-            </div>
-          </div>
-          <div className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
-              <BeforeAfterSlider 
                 beforeImage="/projects-before-after-2-before.jpg"
                 afterImage="/projects-before-after-2-after.jpg"
                 alt="Laurel Street Closets"
@@ -117,6 +104,19 @@ const Projects: React.FC = () => {
             <div className="mt-8 text-center">
               <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Closets</h3>
               <p className="text-stone-600">Custom closet renovation for improved storage and organization.</p>
+            </div>
+          </div>
+          <div className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
+            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+              <BeforeAfterSlider 
+                beforeImage="/projects-before-after-1-before.jpg"
+                afterImage="/projects-before-after-1-after.jpg"
+                alt="Laurel Street Bathroom"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Bathroom</h3>
+              <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
             </div>
           </div>
         </div>
