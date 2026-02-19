@@ -7,45 +7,45 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'Custom Modern Farmhouse',
+      title: 'Tiny House Lyndhurst',
       category: 'New Build',
-      image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop',
-      desc: 'Complete build from foundation to finishing. Open concept living with custom timber details.'
+      image: '/project-1.jpg',
+      desc: 'Complete tiny home build from foundation to finishing. Compact living with quality craftsmanship.'
     },
     {
       id: 2,
-      title: 'Commercial Restaurant Fit-out',
-      category: 'Commercial',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop',
-      desc: 'High-end interior finishing and structural modifications for a local dining establishment.'
+      title: 'Mazerolles at Work',
+      category: 'General Contracting',
+      image: '/project-2.jpg',
+      desc: 'Our team on site—hands-on construction and attention to detail on every project.'
     },
     {
       id: 3,
-      title: 'Heritage Home Restoration',
-      category: 'Renovation',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop',
-      desc: 'Preserving historical charm while updating electrical, structural integrity, and insulation.'
+      title: 'Huron Fence',
+      category: 'Outdoor',
+      image: '/project-3.jpg',
+      desc: 'Custom fence installation and outdoor structure work built to last.'
     },
     {
       id: 4,
-      title: 'Industrial Warehouse Expansion',
-      category: 'Commercial',
-      image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2000&auto=format&fit=crop',
-      desc: 'Steel framing and large-scale concrete work for industrial storage.'
+      title: 'Boat Storage Shop',
+      category: 'New Build',
+      image: '/project-4.jpg',
+      desc: 'Purpose-built storage structure for boats and equipment. Durable, functional design.'
     },
     {
       id: 5,
-      title: 'Backyard Oasis',
-      category: 'Outdoor',
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop',
-      desc: 'Custom multi-level deck, pergola, and outdoor kitchen framing.'
+      title: 'Kitchen 4 Plex Church Conversion',
+      category: 'Renovation',
+      image: '/project-5.jpg',
+      desc: 'Kitchen renovation in a converted church building. Modern finishes in a unique space.'
     },
     {
       id: 6,
-      title: 'Basement Conversion',
-      category: 'Renovation',
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2000&auto=format&fit=crop',
-      desc: 'Transforming an unfinished basement into a luxury rental suite.'
+      title: 'Residential Townhome Framing',
+      category: 'New Build',
+      image: '/project-6.jpg',
+      desc: 'Framing and structural work for residential townhome development.'
     }
   ];
 
@@ -69,8 +69,8 @@ const Projects: React.FC = () => {
               className="group cursor-pointer hover:-translate-y-2 transition-transform duration-500"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              <div className="relative overflow-hidden rounded-sm aspect-[4/3] mb-5 bg-stone-200 border-2 border-dashed border-stone-400 shadow-md flex items-center justify-center">
-                <span className="text-stone-500 text-lg font-medium">Image here</span>
+              <div className="relative overflow-hidden rounded-sm aspect-[4/3] mb-5 shadow-md">
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-sm shadow-sm">
                   {project.category}
                 </div>
@@ -96,27 +96,27 @@ const Projects: React.FC = () => {
           <div className="animate-scale-in">
             <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
               <BeforeAfterSlider 
-                beforeImage="placeholder"
-                afterImage="placeholder"
-                alt="Kitchen Renovation"
+                beforeImage="/projects-before-after-1-before.jpg"
+                afterImage="/projects-before-after-1-after.jpg"
+                alt="Laurel St Bathroom"
               />
             </div>
             <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Kitchen Modernization</h3>
-              <p className="text-stone-600">From dated oak to modern minimalist.</p>
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel St Bathroom</h3>
+              <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
             </div>
           </div>
           <div className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
               <BeforeAfterSlider 
-                beforeImage="placeholder"
-                afterImage="placeholder"
-                alt="Living Room"
+                beforeImage="/projects-before-after-2-before.jpg"
+                afterImage="/projects-before-after-2-after.jpg"
+                alt="Laurel Street Closets"
               />
             </div>
-             <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Living Room Open Concept</h3>
-              <p className="text-stone-600">Removing load-bearing walls for flow.</p>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Closets</h3>
+              <p className="text-stone-600">Custom closet renovation for improved storage and organization.</p>
             </div>
           </div>
         </div>
