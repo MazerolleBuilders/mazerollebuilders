@@ -131,7 +131,7 @@ const About: React.FC = () => {
              </div>
              <h3 className="font-serif font-bold text-2xl mb-2 text-stone-800">Trusted & Certified</h3>
              <p className="text-stone-600 text-base leading-relaxed max-w-md">
-               Proud members of the Oxford County Builders Association and RenoMark upholding the highest standards.
+               Professional standards and quality you can trust.
              </p>
            </div>
         </div>
