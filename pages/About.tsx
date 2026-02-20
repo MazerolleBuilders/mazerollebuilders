@@ -131,7 +131,7 @@ const About: React.FC = () => {
              </div>
              <h3 className="font-serif font-bold text-2xl mb-2 text-stone-800">Trusted & Certified</h3>
              <p className="text-stone-600 text-base leading-relaxed max-w-md">
-               Professional standards and quality you can trust.
+               We hold ourselves to the highest professional standards so you can have confidence in every project we take on.
              </p>
            </div>
         </div>
