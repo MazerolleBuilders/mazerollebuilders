@@ -127,11 +127,11 @@ const Projects: React.FC = () => {
               <BeforeAfterSlider 
                 beforeImage="/projects-before-after-3-before.jpg"
                 afterImage="/projects-before-after-3-after.jpg"
-                alt="Laurel Street Closets"
+                alt="Cambridge Closets"
               />
             </div>
             <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Closets</h3>
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Cambridge Closets</h3>
               <p className="text-stone-600">Custom closet renovation for improved storage and organization.</p>
             </div>
           </div>

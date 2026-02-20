@@ -27,7 +27,10 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
   }, [isDragging, handleMove]);
 
   const onTouchMove = useCallback((e: TouchEvent) => {
-    if (isDragging) handleMove(e.touches[0].clientX);
+    if (isDragging) {
+      e.preventDefault();
+      handleMove(e.touches[0].clientX);
+    }
   }, [isDragging, handleMove]);
 
   const onMouseUp = useCallback(() => setIsDragging(false), []);
@@ -36,7 +39,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
     if (isDragging) {
       window.addEventListener('mousemove', onMouseMove);
       window.addEventListener('mouseup', onMouseUp);
-      window.addEventListener('touchmove', onTouchMove);
+      window.addEventListener('touchmove', onTouchMove, { passive: false });
       window.addEventListener('touchend', onMouseUp);
     }
     return () => {
@@ -49,13 +52,14 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
 
   return (
     <div 
-      className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-lg shadow-xl cursor-ew-resize select-none"
+      className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-lg shadow-xl cursor-ew-resize select-none touch-none"
       ref={containerRef}
       onMouseDown={(e) => {
         setIsDragging(true);
         handleMove(e.clientX);
       }}
       onTouchStart={(e) => {
+        e.preventDefault();
         setIsDragging(true);
         handleMove(e.touches[0].clientX);
       }}
@@ -69,7 +73,8 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
         <img 
           src={afterImage} 
           alt={`After ${alt}`} 
-          className="absolute top-0 left-0 w-full h-full object-cover" 
+          className="absolute top-0 left-0 w-full h-full object-cover touch-none pointer-events-none" 
+          draggable={false}
         />
       )}
 
@@ -86,11 +91,12 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
           <img 
             src={beforeImage} 
             alt={`Before ${alt}`} 
-            className="absolute top-0 left-0 max-w-none h-full object-cover" 
+            className="absolute top-0 left-0 max-w-none h-full object-cover touch-none pointer-events-none"
             style={{ 
               width: containerRef.current ? containerRef.current.clientWidth : '100%',
               objectPosition: beforeImagePosition || 'center'
             }}
+            draggable={false}
           />
         )}
       </div>
