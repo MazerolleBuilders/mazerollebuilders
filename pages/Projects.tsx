@@ -14,10 +14,10 @@ const Projects: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Kitchen Fourplex Conversion',
+      title: 'Church to Fourplex Conversion',
       category: 'Renovation',
       image: '/project-5.jpg',
-      desc: 'Kitchen renovation in a converted church building. Modern finishes in a unique space.'
+      desc: 'A kitchen in one of four new apartment units renovated from a church. Modern finishes in a unique space.'
     },
     {
       id: 6,
@@ -52,7 +52,9 @@ const Projects: React.FC = () => {
   return (
     <>
       <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center">
-         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+         <div className="absolute inset-0 z-0 opacity-20">
+           <img src="/projects-header.jpg" alt="" className="w-full h-full object-cover object-center" />
+        </div>
         <div className="max-w-7xl mx-auto text-center relative z-10 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Our Work</h1>
           <p className="text-stone-300 text-xl max-w-2xl mx-auto">
@@ -99,6 +101,7 @@ const Projects: React.FC = () => {
                 beforeImage="/projects-before-after-2-before.jpg"
                 afterImage="/projects-before-after-2-after.jpg"
                 alt="Puslinch Structural Repair"
+                beforeImagePosition="50% 5%"
               />
             </div>
             <div className="mt-8 text-center">
@@ -111,12 +114,38 @@ const Projects: React.FC = () => {
               <BeforeAfterSlider 
                 beforeImage="/projects-before-after-1-before.jpg"
                 afterImage="/projects-before-after-1-after.jpg"
-                alt="Laurel Street Bathroom"
+                alt="Cambridge Bathroom"
               />
             </div>
             <div className="mt-8 text-center">
-              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Bathroom</h3>
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Cambridge Bathroom</h3>
               <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
+            </div>
+          </div>
+          <div className="animate-scale-in" style={{ animationDelay: '0.3s' }}>
+            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+              <BeforeAfterSlider 
+                beforeImage="/projects-before-after-3-before.jpg"
+                afterImage="/projects-before-after-3-after.jpg"
+                alt="Laurel Street Closets"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Closets</h3>
+              <p className="text-stone-600">Custom closet renovation for improved storage and organization.</p>
+            </div>
+          </div>
+          <div className="animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+              <BeforeAfterSlider 
+                beforeImage="/projects-before-after-4-before.jpg"
+                afterImage="/projects-before-after-4-after.jpg"
+                alt="Pioneer Tower Living Room"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Pioneer Tower Living Room</h3>
+              <p className="text-stone-600">Living room transformation with modern open-concept design.</p>
             </div>
           </div>
         </div>
