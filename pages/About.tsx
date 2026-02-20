@@ -36,9 +36,9 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 gap-4 animate-scale-in max-w-72 mx-auto lg:justify-self-center">
             {[
-              { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner' },
+              { img: '/team-roger.png', name: 'Roger Mazerolle', role: 'Co-Owner' },
               { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner' },
-              { img: '/team-natalie.jpg', name: 'Natalie Mazerolle', role: 'Manager' },
+              { img: '/team-natalie.png', name: 'Natalie Mazerolle', role: 'Manager' },
             ].map((member, i) => (
               <div
                 key={i}
